@@ -1,0 +1,39 @@
+@use "../global" as g;
+
+/*!
+component > _back-to-top.scss
+--------------------------------
+*/
+
+.c-back-to-top {
+  position: fixed;
+  right: 5%;
+  bottom: 10px;
+  z-index: var(--z-index-tooltip);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+  @include g.media(md) {
+    right: 3%;
+    bottom: 3%;
+  }
+}
+
+.js-c-back-to-top.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.c-back-to-top__button {
+  position: relative;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 100vmax;
+  box-shadow: var(--color-bg-icon-shadow);
+  background: var(--color-bg-icon);
+}
+
+.c-back-to-top__icon {
+  font-size: 15px;
+  color: var(--color-icon);
+}

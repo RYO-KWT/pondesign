@@ -1,0 +1,67 @@
+@use "../global" as g;
+
+/*!
+component > _form.scss
+--------------------------------
+*/
+
+.c-form__item:not(:first-child) {
+  margin-block-start: 30px;
+}
+
+.c-form__title {
+  font-size: 0.9375rem;
+  font-weight: bold;
+}
+
+.c-form__required {
+  margin-inline-start: 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--color-font-main);
+}
+
+.c-form__comment {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.c-form__radio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 35px;
+  margin-block-start: 5px;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+}
+.c-form__item input[type="radio"] {
+  margin-inline-end: 5px;
+}
+
+.c-form__item input[type="text"],
+.c-form__item input[type="email"],
+.c-form__item input[type="tel"],
+.c-form__item textarea,
+.c-form__item select {
+  display: block;
+  width: min(100%, 300px);
+  margin-block-start: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  background: var(--color-bg-base);
+}
+
+.c-form__item textarea {
+  width: min(100%, 600px);
+  height: 200px;
+}
+
+.c-form__item select {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.c-form__button {
+  margin-block-start: 50px;
+}

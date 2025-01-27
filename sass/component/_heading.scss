@@ -1,0 +1,43 @@
+@use "../global" as g;
+
+/*!
+component > _heading.scss
+--------------------------------
+*/
+
+.c-heading-lv2 {
+  font-family: var(--font-family-en);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-font-main);
+}
+
+.c-heading-lv2--sub {
+  display: block;
+  margin-block-end: clamp(0.188rem, 0.143rem + 0.19vw, 0.313rem);
+  font-family: var(--font-family-en);
+  font-size: clamp(1.875rem, 1.743rem + 0.56vw, 2.25rem);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.c-heading-lv2--center {
+  text-align: center;
+}
+
+.c-heading-lv2--left {
+  text-align: center;
+  @include g.media(md) {
+    text-align: inherit;
+  }
+}
+
+.c-heading-lv2--light {
+  color: var(--color-font-light);
+}
+
+.c-heading-lv2--ja {
+  font-size: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
+  line-height: 1;
+}

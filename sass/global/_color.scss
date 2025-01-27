@@ -1,0 +1,33 @@
+/*!
+global > _color.scss
+--------------------------------
+*/
+
+:root {
+  --color-bg-base: #fff;
+  --color-bg-dark: #000;
+  --color-bg-main: #391e88;
+  --color-bg-accent: #f0f0f0;
+  --color-bg-sub: #f7f7f7;
+  --color-bg-tag: #e8e8e8;
+  --color-bg-nav: linear-gradient(to top, #250d65 0%, #7633a4 100%);
+
+  --color-font-base: #333;
+  --color-font-main: #391e88;
+  --color-font-light: #fff;
+  --color-font-marker: linear-gradient(transparent 70%, #f3f534 0%);
+
+  --color-bg-button: linear-gradient(to left, #250d65 0%, #7633a4 100%);
+  --color-bg-button--hover: linear-gradient(to right, #250d65 0%, #7633a4 100%);
+  --color-bg-button--border: #fff;
+  --color-font-button: #fff;
+
+  --color-bg-icon: #fff;
+  --color-bg-icon-active: #f1ebf8;
+  --color-bg-icon-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  --color-bg-icon-gradient: linear-gradient(to left, #250d65 0%, #7633a4 100%);
+
+  --color-icon: #391e88;
+  --color-icon-light: #fff;
+  --color-icon-dark: #333;
+}

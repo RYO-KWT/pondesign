@@ -1,0 +1,49 @@
+@use "../../global" as g;
+
+/*!
+page > recruit > _recruit.scss
+--------------------------------
+*/
+
+.recruit {
+  padding-block-start: clamp(3.75rem, 3.09rem + 2.82vw, 5.625rem);
+}
+
+.recruit__title {
+  font-size: clamp(1.125rem, 0.817rem + 1.31vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: var(--color-font-main);
+}
+
+.recruit__sub-title {
+  display: block;
+  margin-block-end: 10px;
+  font-family: var(--font-family-en);
+  font-size: clamp(3rem, 2.472rem + 2.25vw, 4.5rem);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.recruit__text {
+  margin-block-start: clamp(1rem, 0.912rem + 0.38vw, 1.25rem);
+  text-align: center;
+}
+
+.recruit__image {
+  overflow: hidden;
+  margin-block-start: 40px;
+  aspect-ratio: 375/214;
+  clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  @include g.media(md) {
+    aspect-ratio: inherit;
+    max-height: 824px;
+  }
+}
+
+.recruit__image img {
+  object-fit: cover;
+  object-position: center top;
+  height: 100%;
+}

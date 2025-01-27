@@ -1,0 +1,28 @@
+@use "../global" as g;
+
+/*!
+component > _media.scss
+--------------------------------
+*/
+
+.c-media {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  @include g.media(md) {
+    gap: 60px;
+  }
+}
+
+.c-media__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  @include g.media(md) {
+    grid-template-columns: 50% 1fr;
+  }
+  @include g.media(lg) {
+    grid-template-columns: 450px 1fr;
+    gap: 50px;
+  }
+}

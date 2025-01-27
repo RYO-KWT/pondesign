@@ -1,0 +1,33 @@
+@use "../../global" as g;
+
+/*!
+page > company > _company-info.scss
+--------------------------------
+*/
+
+.company-info__map {
+  margin-block-start: clamp(2.5rem, 2.06rem + 1.88vw, 3.75rem);
+  aspect-ratio: 325/240;
+  @include g.media(md) {
+    aspect-ratio: 1110/400;
+  }
+}
+
+.company-info__map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.company-info__link {
+  font-size: 0.875rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: var(--color-font-main);
+}
+
+@media (any-hover: hover) {
+  .company-info__link:hover {
+    text-decoration: underline;
+  }
+}

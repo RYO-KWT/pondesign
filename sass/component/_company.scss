@@ -1,0 +1,72 @@
+@use "../global" as g;
+
+/*!
+component > _company.scss
+--------------------------------
+*/
+
+.c-company {
+  position: relative;
+  padding-block-start: clamp(5.938rem, 4.947rem + 4.23vw, 8.75rem);
+  padding-block-end: clamp(3.125rem, 2.685rem + 1.88vw, 4.375rem);
+}
+
+.c-company--top {
+  padding-block: clamp(3.75rem, 1.989rem + 7.51vw, 8.75rem);
+}
+
+.c-company__image {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: var(--z-index-bg);
+  @include g.media(md) {
+    left: 50%;
+    translate: -50%;
+    width: var(--content-width-lg);
+  }
+}
+
+.c-company__image--top {
+  inset: 0;
+
+  @include g.media(md) {
+    top: 51px;
+    left: 50%;
+    translate: -50%;
+    width: var(--content-width-lg);
+  }
+}
+
+.c-company__inner {
+  margin-block-start: clamp(1.875rem, 1.787rem + 0.38vw, 2.125rem);
+}
+
+.c-company__inner--top {
+  margin-block-start: 30px;
+}
+
+.c-company__title {
+  width: fit-content;
+  margin-inline: auto;
+  font-size: clamp(2rem, 1.824rem + 0.75vw, 2.5rem);
+  line-height: 1;
+  background: var(--color-font-marker);
+}
+
+.c-company__text {
+  margin-block-start: 40px;
+  text-align: center;
+}
+
+.c-company__button {
+  margin-block-start: 30px;
+}
+
+.c-company__media {
+  margin-block-start: clamp(3.75rem, 1.549rem + 9.39vw, 10rem);
+}
+
+.c-company__media-text:not(:first-child) {
+  margin-block-start: clamp(1.563rem, 1.518rem + 0.19vw, 1.688rem);
+}

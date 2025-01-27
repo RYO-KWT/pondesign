@@ -1,0 +1,16 @@
+@use "../../global" as g;
+
+/*!
+page > contact > _contact.scss
+--------------------------------
+*/
+
+.contact__text {
+  text-align: center;
+}
+
+.contact__inner {
+  margin-block-start: clamp(1.875rem, 1.655rem + 0.94vw, 2.5rem);
+  padding: clamp(1.875rem, 0.555rem + 5.63vw, 5.625rem);
+  background: var(--color-bg-accent);
+}

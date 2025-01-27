@@ -1,0 +1,20 @@
+@use "../global" as g;
+
+/*!
+component > _contact.scss
+--------------------------------
+*/
+
+.c-contact {
+  padding-block: clamp(3.75rem, 3.53rem + 0.94vw, 4.375rem);
+  background: var(--color-bg-sub);
+}
+
+.c-contact__text {
+  margin-block-start: 30px;
+  text-align: center;
+}
+
+.c-contact__button {
+  margin-block-start: 20px;
+}

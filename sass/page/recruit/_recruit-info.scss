@@ -1,0 +1,40 @@
+@use "../../global" as g;
+
+/*!
+page > recruit > _recruit-info.scss
+--------------------------------
+*/
+
+.recruit-info {
+  padding-block: clamp(2.5rem, 1.84rem + 2.82vw, 4.375rem);
+}
+
+.company-info__inner {
+  margin-block-start: 30px;
+  padding-block: clamp(1.875rem, 1.215rem + 2.82vw, 3.75rem);
+  padding-inline: clamp(1.25rem, -0.401rem + 7.04vw, 5.938rem);
+  border-radius: 6px;
+  border: 1px solid var(--color-bg-main);
+  background: var(--color-bg-base);
+}
+
+.recruit-info__title {
+  font-size: clamp(1.25rem, 1.162rem + 0.38vw, 1.5rem);
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.recruit-info__list {
+  margin-block-start: 10px;
+  padding-left: 1em;
+  list-style: revert;
+}
+.recruit-info__button {
+  margin-block-start: clamp(2.5rem, 2.28rem + 0.94vw, 3.125rem);
+}
+.recruit-info__comment {
+  margin-block-start: 5px;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+}

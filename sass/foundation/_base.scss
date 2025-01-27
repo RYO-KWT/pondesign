@@ -1,0 +1,26 @@
+@use "../global" as g;
+
+/*!
+foundation > _base.scss
+--------------------------------
+*/
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  background: var(--color-bg-base);
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--font-family-base);
+  font-size: clamp(0.875rem, 0.853rem + 0.09vw, 0.938rem);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  color: var(--color-font-base);
+}
+
+.js-body.is-active {
+  overflow: hidden;
+}

@@ -1,0 +1,57 @@
+@use "../global" as g;
+
+/*!
+component > _breadcrumb.scss
+--------------------------------
+*/
+
+.c-breadcrumb {
+  position: sticky;
+  top: 64px;
+  z-index: var(--z-index-tooltip);
+  background: var(--color-bg-accent);
+  @include g.media(md) {
+    top: 86px;
+  }
+}
+
+.c-breadcrumb__list {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  @include g.media(md) {
+    height: 43px;
+  }
+}
+
+.c-breadcrumb__list::-webkit-scrollbar {
+  display: none;
+}
+
+.c-breadcrumb__item:not(:last-child)::after {
+  content: ">";
+  display: inline-block;
+  padding-inline: 7px;
+}
+
+.c-breadcrumb__link {
+  display: inline-block;
+  font-family: var(--font-family-en);
+  font-size: clamp(0.688rem, 0.665rem + 0.09vw, 0.75rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+@media (any-hover: hover) {
+  .c-breadcrumb__link:not(.c-breadcrumb__link--active):hover {
+    color: var(--color-font-main);
+  }
+}
+
+.c-breadcrumb__link--active {
+  color: var(--color-font-main);
+}

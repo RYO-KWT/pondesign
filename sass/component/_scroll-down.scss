@@ -1,0 +1,54 @@
+@use "../global" as g;
+
+/*!
+component > _scroll-down.scss
+--------------------------------
+*/
+
+.c-scroll-down {
+  position: absolute;
+  bottom: 0;
+  right: 4%;
+}
+
+.c-scroll-down__text {
+  position: absolute;
+  bottom: 90px;
+  font-family: var(--font-family-en);
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  color: var(--color-font-light);
+}
+
+.c-scroll-down__text::after {
+  content: "";
+  position: absolute;
+  bottom: -90px;
+  left: calc(50% - 1px);
+  width: 1px;
+  height: 80px;
+  background: var(--color-bg-base);
+  animation: scroll-line 1.4s linear infinite;
+}
+
+@keyframes scroll-line {
+  from {
+    height: 80px;
+    opacity: 0;
+  }
+
+  50% {
+    height: 40px;
+    opacity: 1;
+  }
+
+  to {
+    height: 0;
+    opacity: 0;
+    
+  }
+}

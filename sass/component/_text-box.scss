@@ -1,0 +1,15 @@
+@use "../global" as g;
+
+/*!
+component > _text-box.scss
+--------------------------------
+*/
+
+.c-text-box__text {
+  margin-block-start: 30px;
+  text-align: center;
+}
+
+.c-text-box__button {
+  margin-block-start: 30px;
+}

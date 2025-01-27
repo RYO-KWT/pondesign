@@ -1,0 +1,11 @@
+@use "../../global" as g;
+
+/*!
+page > archive-news > _archive-news.scss
+--------------------------------
+*/
+
+.archive-news__inner {
+  display: grid;
+  gap: 40px;
+}

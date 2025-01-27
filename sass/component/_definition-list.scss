@@ -1,0 +1,23 @@
+@use "../global" as g;
+
+/*!
+component > _definition-list.scss
+--------------------------------
+*/
+
+.c-definition__item {
+  padding-inline: 10px;
+  padding-block: 30px;
+  font-size: 0.9375rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--color-bg-accent);
+  @include g.media(md) {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    align-items: center;
+  }
+}
+
+.c-definition__term {
+  font-weight: 600;
+}

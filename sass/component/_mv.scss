@@ -1,0 +1,29 @@
+@use "../global" as g;
+
+/*!
+component > _mv.scss
+--------------------------------
+*/
+
+.c-mv {
+  position: relative;
+  height: 180px;
+  padding-block-start: 82px;
+  @include g.media(md) {
+    height: 240px;
+    padding-block-start: 87px;
+  }
+}
+
+.c-mv__image {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-index-bg);
+}
+
+.c-mv__image img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}

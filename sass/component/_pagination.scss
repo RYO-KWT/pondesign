@@ -1,0 +1,32 @@
+@use "../global" as g;
+
+/*!
+component > _pagination.scss
+--------------------------------
+*/
+
+.c-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.c-pagination__link {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  aspect-ratio: 1;
+  border-radius: 100vmax;
+  font-family: var(--font-family-en);
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: var(--color-bg-icon-gradient);
+  color: var(--color-icon-light);
+}
+
+.c-pagination__link--active {
+  color: var(--color-icon-dark);
+  background: var(--color-bg-icon-active);
+}

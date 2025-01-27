@@ -1,0 +1,80 @@
+@use "../global" as g;
+
+/*!
+component > _button.scss
+--------------------------------
+*/
+
+.c-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  width: min(100%, 220px);
+  height: 56px;
+  font-family: var(--font-family-en);
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 100vmax;
+  color: var(--color-font-button);
+  z-index: var(--z-index-default);
+}
+
+.c-button::before,
+.c-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg-button);
+  border-radius: 100vmax;
+  z-index: var(--z-index-bg);
+}
+
+.c-button::after {
+  background: var(--color-bg-button--hover);
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+@media (any-hover: hover) {
+  .c-button:hover::after {
+    opacity: 1;
+  }
+}
+
+.c-button--transparent {
+  border: 1px solid var(--color-bg-button--border);
+  background: transparent;
+}
+
+.c-button--transparent::before,
+.c-button--transparent::after {
+  content: none;
+}
+
+.c-button__icon {
+  position: absolute;
+  top: calc(50% - 7px);
+  right: 16px;
+  transition: right 0.3s;
+}
+
+@media (any-hover: hover) {
+  .c-button:hover .c-button__icon {
+    right: 8px;
+  }
+}
+
+.c-button--left {
+  margin-inline: inherit;
+  @include g.media(md) {
+    margin-inline: auto;
+  }
+}
+
+.c-button--center {
+  margin-inline: auto;
+}

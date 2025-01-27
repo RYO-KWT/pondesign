@@ -1,0 +1,28 @@
+@use "../../global" as g;
+
+/*!
+page > top > _top-recruit.scss
+--------------------------------
+*/
+
+.top-recruit {
+  padding-block-end: clamp(2.5rem, 0.96rem + 6.57vw, 6.875rem);
+}
+
+.top-recruit__inner {
+  display: grid;
+  @include g.media(md) {
+    grid-template-columns: 1fr 40%;
+    direction: rtl;
+  }
+}
+
+.top-recruit__image img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.top-recruit__desc {
+  padding-block: 70px;
+  background: var(--color-bg-accent);
+}

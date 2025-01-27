@@ -1,0 +1,14 @@
+@use "../../global" as g;
+
+/*!
+page > works > _works.scss
+--------------------------------
+*/
+
+.works__title {
+  margin-block-start: 15px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-align: center;
+}

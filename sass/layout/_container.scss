@@ -1,0 +1,26 @@
+@use "../global" as g;
+
+/*!
+layout > _container.scss
+--------------------------------
+*/
+
+.l-container {
+  width: var(--content-width);
+  margin-inline: auto;
+}
+
+.l-container-xs {
+  width: var(--content-width-xs);
+  margin-inline: auto;
+}
+
+.l-container-sm {
+  width: var(--content-width-sm);
+  margin-inline: auto;
+}
+
+.l-container-lg {
+  width: var(--content-width-lg);
+  margin-inline: auto;
+}

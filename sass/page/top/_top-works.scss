@@ -1,0 +1,66 @@
+@use "../../global" as g;
+
+/*!
+page > top > _top-works.scss
+--------------------------------
+*/
+
+.top-works {
+  padding-block-start: clamp(2.188rem, 1.527rem + 2.82vw, 4.063rem);
+}
+
+.top-works__inner {
+  position: relative;
+  @include g.media(md) {
+    display: grid;
+    grid-template-columns: 57% 1fr;
+    align-items: center;
+    padding-block: 60px 90px;
+  }
+}
+
+.top-works__inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg-accent);
+  z-index: var(--z-index-bg);
+  @include g.media(md) {
+    width: 60%;
+    margin-left: auto;
+  }
+}
+
+.top-works__swiper {
+  position: relative;
+}
+
+.swiper-button-prev {
+  rotate: 180deg;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "\f105";
+  font-family: "Font Awesome 6 Free";
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-bg-main);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -26px;
+  text-align: right;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-bg-main);
+}
+
+.top-works__desc {
+  padding-block: 48px 60px;
+  padding-inline: 4%;
+}

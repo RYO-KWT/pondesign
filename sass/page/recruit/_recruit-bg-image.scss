@@ -1,0 +1,13 @@
+@use "../../global" as g;
+
+/*!
+page > recruit > _recruit-bg-image.scss
+--------------------------------
+*/
+
+.recruit-bg-image {
+  background-image: url(../images/bg-recruit__pattern@2x.png);
+  background-position: center top;
+  background-repeat: repeat;
+  background-size: 400px 400px;
+}

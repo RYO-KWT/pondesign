@@ -1,0 +1,57 @@
+@use "../global" as g;
+
+/*!
+component > _date-list.scss
+--------------------------------
+*/
+
+.c-date__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  @include g.media(md) {
+    gap: 15px;
+  }
+}
+
+.c-date__item {
+  display: grid;
+  gap: 2px 20px;
+  grid-template-columns: 1fr;
+  @include g.media(md) {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.c-date__time {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+.c-date__title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+@media (any-hover: hover) {
+  .c-date__link:hover {
+    text-decoration: underline;
+  }
+}
+
+.c-date__tag {
+  display: inline-block;
+  width: 80px;
+  height: 24px;
+  padding: 2px 4px;
+  font-size: clamp(0.688rem, 0.667rem + 0.09vw, 0.75rem);
+  font-weight: 600;
+  text-align: center;
+  background: var(--color-bg-tag);
+  border-radius: 100vmax;
+  @include g.media(md) {
+    height: 26px;
+  }
+}

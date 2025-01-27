@@ -1,0 +1,11 @@
+@use "../global" as g;
+
+/*!
+component > _section.scss
+--------------------------------
+*/
+
+.l-section {
+  padding-block-start: clamp(2.5rem, 1.84rem + 2.82vw, 4.375rem);
+  padding-block-end: clamp(5rem, 4.34rem + 2.82vw, 6.875rem);
+}

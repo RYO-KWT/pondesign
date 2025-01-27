@@ -1,0 +1,19 @@
+@use "../global" as g;
+
+/*!
+component > _card.scss
+--------------------------------
+*/
+
+.c-card {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+}
+
+.c-card--col3 {
+  @include g.media(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}

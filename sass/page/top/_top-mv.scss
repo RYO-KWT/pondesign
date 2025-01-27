@@ -1,0 +1,50 @@
+@use "../../global" as g;
+
+/*!
+page > top > _top-mv.scss
+--------------------------------
+*/
+
+.top-mv {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+}
+
+.top-mv__image {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-index-bg);
+}
+
+.top-mv__image img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.top-mv__title {
+  font-size: clamp(1rem, 0.824rem + 0.75vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  color: var(--color-font-light);
+  @include g.media(md) {
+    text-align: center;
+  }
+}
+
+.top-mv__title--sub {
+  display: block;
+  margin-block-end: 20px;
+  font-size: clamp(2.5rem, 1.796rem + 3vw, 4.5rem);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.top-mv__button {
+  margin-block-start: clamp(1.875rem, 1.435rem + 1.88vw, 3.125rem);
+  text-align: center;
+}
